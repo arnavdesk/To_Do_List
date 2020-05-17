@@ -12,7 +12,7 @@
     var incompleteBtn = document.getElementById("incomplete-show");
     var comandDiv = document.getElementById("comand");
     var errorMsg = document.getElementById("empty-error");
-
+    var listContainer = document.getElementById("item-list-division");
     listOfItems.innerHTML = "";
 
     var showErrorMsg = function () {
@@ -66,7 +66,6 @@
         }
 
         newListItem.appendChild(childInputCheckbox);
-
         var labelChild = document.createElement("label");
         labelChild.setAttribute("for", "check" + i);
         var divLabelChild = document.createElement("div");
@@ -96,7 +95,8 @@
 
         setTimeout(function () {
             newListItem.style.opacity = 1;
-        }, 10);
+            newListItem.style.transform = "none";
+        }, 100);
 
         console.log(allListElements);
         totalTask++;
@@ -172,6 +172,7 @@
         divDelete.appendChild(delIcon);
         newListItem.appendChild(divDelete);
         newListItem.style.opacity = 1;
+        newListItem.style.transform = "none";
 
         listOfItems.appendChild(newListItem);
     }
@@ -199,6 +200,7 @@
         listOfItems.appendChild(getListElementFunc(i, stringNote));
         inputNote.value = "";
         i++;
+        listContainer.scrollTop = listOfItems.scrollHeight;
         showErrorMsg();
     }
 

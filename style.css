@@ -76,6 +76,7 @@ label::-webkit-scrollbar {
 }
 
 #item-list{
+    perspective: 100px;
     min-height: 20px;
     padding: 0px;
     margin: 0px;
@@ -85,14 +86,17 @@ label::-webkit-scrollbar {
 }
 
 #item-list-division{
+    transition: all 1s ease-in-out ;
+    overflow: scroll;
+    max-height: 60vh;
     width: 100%;
     border-bottom: 2px solid lightgray;
 }
 
 .list-item{
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-    overflow: hidden;
+    transform: rotateY(-90deg);
+    opacity: 1;
+    transition : all 0.4s cubic-bezier(.36,-0.64,.34,1.76);
     background-color: whitesmoke;
     margin: 2px 0px;
     display: flex;
