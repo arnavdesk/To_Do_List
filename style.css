@@ -48,6 +48,7 @@ label::-webkit-scrollbar {
 }
 
 #itemInput{
+    
     border-radius: 6px;
     border:0px;
     box-shadow: 0px 0px 10px 3px slategray;
