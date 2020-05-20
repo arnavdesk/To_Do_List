@@ -251,6 +251,9 @@
     incompleteBtn.style.backgroundColor = "lightslategray";
 
     clearBtn.onclick = function () {
+        allBtn.style.backgroundColor = "black";
+        completeBtn.style.backgroundColor = "lightslategray";
+        incompleteBtn.style.backgroundColor = "lightslategray";
         clearDisplay();
         deleteCompleted();
         displayAll();

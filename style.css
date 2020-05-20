@@ -76,7 +76,8 @@ label::-webkit-scrollbar {
 }
 
 #item-list{
-    perspective: 100px;
+    transition: all 0.5s ease-in-out;
+    perspective: 1000px;
     min-height: 20px;
     padding: 0px;
     margin: 0px;
@@ -86,7 +87,7 @@ label::-webkit-scrollbar {
 }
 
 #item-list-division{
-    transition: all 1s ease-in-out ;
+    transition: all 0.5s ease-in-out ;
     overflow: scroll;
     max-height: 60vh;
     width: 100%;
